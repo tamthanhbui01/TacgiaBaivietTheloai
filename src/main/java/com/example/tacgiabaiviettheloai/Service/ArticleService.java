@@ -20,4 +20,12 @@ public class ArticleService {
     public List<Article> findByGenre(String genreName) {
         return articleRepository.findByGenre(genreName); //query 1
     }
+
+    public List<Article> findByWriter(String writerName) {
+    return articleRepository.findByWriter(writerName);
+    }
+
+    public List<Article> findByFields() {
+        return articleRepository.findByFields();
+    }
 }

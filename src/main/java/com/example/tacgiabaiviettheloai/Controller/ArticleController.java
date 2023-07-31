@@ -19,8 +19,15 @@ public class ArticleController {
     public List<Article> findAllArticles(){
         return articleService.findAllArticles();
     }
-    @GetMapping("/searchArticle")
+    @GetMapping("/searchArticleByGenre")
     public List<Article> findByGenre(@RequestParam String genreName){
        return articleService.findByGenre(genreName);
     }
+    @GetMapping("/searchArticleByWriter")
+    public List<Article> findByWriter (@RequestParam String writerName){return articleService.findByWriter(writerName);}
+    @GetMapping("/searchArticle/d")
+    public List<Article> findByFields(){
+        return articleService.findByFields();
+    }
+
 }
